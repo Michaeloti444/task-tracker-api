@@ -50,6 +50,9 @@ app.delete('/tasks/:id', (req, res) => {
   saveTasks();
   res.status(204).send();
 });
+app.get('/', (req, res) => {
+  res.send('Task Tracker API is running. Use /tasks to interact with tasks.');
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
